@@ -1,0 +1,9 @@
+uuid: fd74ae08-8457-4fa2-8a70-06040a4d974e
+langcode: en
+status: true
+dependencies: {  }
+name: 'SDG Indicators'
+vid: sdg_indicators
+description: null
+weight: 0
+new_revision: false

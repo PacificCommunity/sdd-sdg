@@ -1,0 +1,34 @@
+uuid: 909ca70b-b556-43c4-9fba-f0910feaef87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.sdg_indicators.field_dashboard_link
+    - taxonomy.vocabulary.sdg_indicators
+  module:
+    - link
+id: taxonomy_term.sdg_indicators.default
+targetEntityType: taxonomy_term
+bundle: sdg_indicators
+mode: default
+content:
+  field_dashboard_link:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true

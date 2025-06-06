@@ -1,0 +1,4 @@
+tiles:
+  css:
+    component:
+      css/style.css: {}

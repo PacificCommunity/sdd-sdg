@@ -1,0 +1,18 @@
+uuid: a6309698-0a1b-49f8-aca4-8cbfea06086b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sdg_indicators
+id: taxonomy_term.sdg_indicators.name
+field_name: name
+entity_type: taxonomy_term
+bundle: sdg_indicators
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

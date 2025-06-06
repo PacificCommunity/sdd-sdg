@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the SDD SDG module.
+ */
+
+ use Drupal\paragraphs\Entity\Paragraph;
+ use Drupal\node\Entity\Node;
+ use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Populate SDG indicators taxonomy
+ */
+function sdd_sdg_install() {
+    $indicators = [
+      ['1 - No Poverty', 'https://pacificdata.org/content/sdg-1-no-poverty'],
+      ['2 - Zero Hunger', 'https://pacificdata.org/content/sdg-2-zero-hunger'],
+      ['3 - Good Health and Well-Being', 'https://pacificdata.org/content/sdg-3-good-health-and-well-being'],
+      ['4 - Quality Education', 'https://pacificdata.org/content/sdg-4-quality-education'],
+      ['5 - Gender Equality', 'https://pacificdata.org/content/sdg-5-gender-equality'],
+      ['6 - Clean Water and Sanitation', 'https://pacificdata.org/content/sdg-6-clean-water-and-sanitation'],
+      ['7 - Affordable and Clean Energy', 'https://pacificdata.org/content/sdg-7-affordable-and-clean-energy'],
+      ['8 - Decent Work and Economic Growth', 'https://pacificdata.org/content/sdg-8-decent-work-and-economic-growth'],
+      ['9 - Industry Innovation and Infrastructure', 'https://pacificdata.org/content/sdg-9-industry-innovation-and-infrastructure'],
+      ['10 - Reduced Inequalities', 'https://pacificdata.org/content/sdg-10-reduced-inequalities'],
+      ['11 - Sustainable Cities and Communities', 'https://pacificdata.org/content/sdg-11-sustainable-cities-and-communities'],
+      ['12 - Responsible Consumption and Production', 'https://pacificdata.org/content/sdg-12-responsible-consumption-and-production'],
+      ['13 - Climate Action', 'https://pacificdata.org/content/sdg-13-climate-action'],
+      ['14 - Life Below Water', 'https://pacificdata.org/content/sdg-14-life-below-water'],
+      ['15 - Life Land', 'https://pacificdata.org/content/sdg-15-life-land'],
+      ['16 - Peace Justice and Strong Institutions', 'https://pacificdata.org/content/sdg-16-peace-justice-and-strong-institutions'],
+      ['17 - Partnerships Goals', 'https://pacificdata.org/content/sdg-17-partnerships-goals']
+    ];
+  
+    foreach ($indicators as $indicator) {
+  
+      list($title, $uri) = $indicator;
+  
+      $vid = 'sdg_indicators';
+      //if ($existing = taxonomy_term_load_multiple_by_name($title, $vid)) {
+      if ($existing = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties(['name' => $title, 'vid' => $vid])) {
+        continue;
+      }
+      
+      $weight = intval(trim(substr($title, 0, strpos($title, '-')))) - 1;
+  
+      $values = [
+        'vid' => $vid,
+        'name' => $title,
+        'field_dashboard_link' => [['uri' => $uri]],
+        'weight'  => $weight
+      ];
+      $term = Term::create($values);
+      $term->save();
+  
+    }
+  }

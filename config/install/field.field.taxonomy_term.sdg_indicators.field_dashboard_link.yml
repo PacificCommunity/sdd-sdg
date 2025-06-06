@@ -1,0 +1,23 @@
+uuid: 87fb7782-177e-4aca-9b7f-84006edcc2b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_dashboard_link
+    - taxonomy.vocabulary.sdg_indicators
+  module:
+    - link
+id: taxonomy_term.sdg_indicators.field_dashboard_link
+field_name: field_dashboard_link
+entity_type: taxonomy_term
+bundle: sdg_indicators
+label: 'Dashboard Link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

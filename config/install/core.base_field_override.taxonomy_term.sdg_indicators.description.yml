@@ -1,0 +1,20 @@
+uuid: 248d5f72-0a99-4c7d-ac69-dcafbf552ea3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sdg_indicators
+  module:
+    - text
+id: taxonomy_term.sdg_indicators.description
+field_name: description
+entity_type: taxonomy_term
+bundle: sdg_indicators
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,8 @@
+name: 'SDD SDG'
+type: module
+description: 'Provides a block that shows the SDGs on a page'
+package: SDD
+core_version_requirement: ^10 || ^11
+dependencies:
+  - content_translation
+  - metatag

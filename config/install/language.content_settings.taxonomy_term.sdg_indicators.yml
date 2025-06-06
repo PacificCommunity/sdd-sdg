@@ -1,0 +1,18 @@
+uuid: bc3f86c8-1c88-4a13-94b9-7a7b43b996f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sdg_indicators
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.sdg_indicators
+target_entity_type_id: taxonomy_term
+target_bundle: sdg_indicators
+default_langcode: site_default
+language_alterable: false
