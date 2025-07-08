@@ -1,0 +1,9 @@
+{
+    "name": "pacific_community/sdd_sdg",
+    "description": "SDG Goals tiles to highlight related goals per topic",
+    "type": "drupal-module",
+    "homepage": "https://github.com/PacificCommunity/sdd-sdg",
+    "require": {
+        "drupal/core": "^9 || ^10 || ^11"
+    }
+}
