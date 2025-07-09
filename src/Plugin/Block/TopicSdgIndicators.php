@@ -58,7 +58,7 @@ class TopicSdgIndicators extends BlockBase {
     }
     
     // Display Logo
-    if (array_key_exists('topic_sdg_logo', $config)) {
+    if (array_key_exists('topic_sdg_logo', $config) && !empty($config['topic_sdg_logo'])) {
       $items[] = [
         '#type' => 'inline_template',
         '#template' => '<a href="https://pacificdata.org/dashboard/17-goals-transform-pacific" target="_blank" title="Visit the SDG Dashboard" data-toggle="tooltip" class="sdg-logo">{{label}}</a>',
