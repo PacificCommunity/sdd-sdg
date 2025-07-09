@@ -14,3 +14,31 @@ See: https://www.drupal.org/node/895232 for further information.
 
 After installation, place a 'SDD SDG' block using the Block Layout page or through a Paragraph. Use the checkboxes in the block configuration to set an SDG as active or inactive.
 
+### Install as a contrib module
+
+Step 1: Add repository in composer.json
+
+```
+{
+    "repositories": {
+        "sdd_sdg": {
+            "type": "vcs",
+            "url": "git@github.com:pacificCommunity/sdd-sdg.git"
+        }
+    }
+}
+```
+
+Step 2: Install via composer
+
+```
+composer require pacific_community/sdd_sdg:1.0
+```
+
+Step 3: Enable via drush (or GUI)
+
+```
+drush en pacific_community/sdd_sdg
+```
+
+Step 4 (optional): Create a new paragraph type
