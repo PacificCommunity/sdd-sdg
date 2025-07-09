@@ -3,7 +3,7 @@
   display: inline-block;
   width: 48px;
   height: 48px;
-  background: url(/modules/custom/sdd_sdg/assets/SDG-indicators-48x48.png) no-repeat -240px -96px;
+  background: url(/modules/contrib/sdd_sdg/assets/SDG-indicators-48x48.png) no-repeat -240px -96px;
   text-indent: -9999px;
   overflow: hidden;
   margin: 0 6px 6px 0;
@@ -66,7 +66,7 @@
 .topic-sdg-indicators.double-trouble .sdg-logo {
   width: 96px;
   height: 96px;
-  background: url(/modules/custom/sdd_sdg/assets/SDG-indicators-96x96.png) no-repeat -480px -192px;
+  background: url(/modules/contrib/sdd_sdg/assets/SDG-indicators-96x96.png) no-repeat -480px -192px;
 }
 .topic-sdg-indicators.double-trouble .sdg-1 {
   background-position: 0px 0px;
@@ -227,15 +227,15 @@
 
 @media (min-width: 992px) {
   .topic-sdg-indicators a.sdg-tile:hover,
-.topic-sdg-indicators a.sdg-logo:hover {
+  .topic-sdg-indicators a.sdg-logo:hover {
     transform: translate(0, -3px);
   }
 }
 body.spc-lang-fr .topic-sdg-indicators .sdg-tile,
 body.spc-lang-fr .topic-sdg-indicators .sdg-logo {
-  background-image: url(/modules/custom/sdd_sdg/assets/SDG-indicators-48x48-fr.png);
+  background-image: url(/modules/contrib/sdd_sdg/assets/SDG-indicators-48x48-fr.png);
 }
 body.spc-lang-fr .topic-sdg-indicators.double-trouble .sdg-tile,
 body.spc-lang-fr .topic-sdg-indicators.double-trouble .sdg-logo {
-  background-image: url(/modules/custom/sdd_sdg/assets/SDG-indicators-96x96-fr.png);
+  background-image: url(/modules/contrib/sdd_sdg/assets/SDG-indicators-96x96-fr.png);
 }
